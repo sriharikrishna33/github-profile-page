@@ -1,0 +1,134 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12 mt-4">
+      <h6>Popular repositories</h6>
+    </div>
+    <div *ngFor="let item of repoList" class="col-12 col-md-6 col-sm-12 mt-2  d-flex align-items-stretch">
+      <div class="card w-100">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-12">
+              <h3
+                style="word-break: break-all!important;font-weight: 600;font-size: 14px;margin-bottom: 0rem !important;">
+                <a href="{{item.svn_url}}" target="_blank">{{item.name |titlecase}}</a>
+              </h3>
+              <p class="text-secondary text-break f-12 mb-2 mt-2 pr-4">
+                {{item.description?item.description:item.name}}
+              </p>
+              <div class="text-secondary mt-2 mb-1">
+                <span class="ml-0 mr-3" *ngIf="item.language">
+                  <span class="repo-language-color mr-2"
+                    [ngStyle]="{'background-color': getLanguageColor(item.language)}"></span>
+                  <span class="f-12">{{item.language}}</span>
+                </span>
+                <span class="ml-0 mr-3">
+                  <span class="mr-2 f-12"><i class="far fa-star"></i></span>
+                  <span class="f-12">{{generateRandom(2)}}</span>
+                </span>
+                <span class="ml-0 mr-3">
+                  <span class="mr-2 f-12"><i class="fas fa-code-branch"></i></span>
+                  <span class="f-12">{{generateRandom(2)}}</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 mt-4">
+      <h6>806 contributions in the last year </h6>
+    </div>
+    <div class="col-12 mt-2">
+      <div class="card">
+        <div class="card-body">
+          <div echarts [options]="heatMapChartOptions" style="height: 250px;margin-top: -5rem !important;"></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 mt-3">
+      <div class="row">
+        <div class="col-10">
+          <div class="row">
+            <div class="col-12">
+              <h6>Contribution activity</h6>
+            </div>
+            <div class="col-12">
+              <div class="row">
+                <div class="col-12">
+                  <div class="left-timeline mt-3 mb-3 pl-4">
+                    <ul class="list-unstyled events mb-0">
+                      <li class="event-list" *ngFor="let activity of activities">
+                        <div class="pb-4">
+                          <div class="media">
+                            <div class="event-date text-center mr-4">
+                              <div class="bg-soft-primary p-1 rounded text-primary font-size-14">
+                                {{ activity.time }}</div>
+                            </div>
+                            <div class="media-body">
+                              <div class="row">
+                                <div class="col-8">
+                                  <h6 class="font-size-15 mt-0 mb-1">{{ activity.title }}</h6>
+                                  <p class="text-muted font-size-14">{{ activity.text }}</p>
+                                </div>
+                                <div class="col-4 d-flex justify-content-end">
+                                  <mat-progress-bar style="height: 7px;
+                                  border-radius: 5rem;" mode="determinate" [value]="activity.count"></mat-progress-bar>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-2 w-100">
+          <ul style="list-style-type: none;">
+            <li>
+              <button mat-flat-button style="background-color: #0366d6;color: #fff;">2021</button>
+            </li>
+            <li>
+              <a href="/" class="ml-3">2020</a>
+            </li>
+            <li>
+              <a href="/" class="ml-3">2019</a>
+            </li>
+            <li>
+              <a href="/" class="ml-3">2018</a>
+            </li>
+            <li>
+              <a href="/" class="ml-3">2017</a>
+            </li>
+            <li>
+              <a href="/" class="ml-3">2016</a>
+            </li>
+            <li>
+              <a href="/" class="ml-3">2015</a>
+            </li>
+            <li>
+              <a href="/" class="ml-3">2014</a>
+            </li>
+            <li>
+              <a href="/" class="ml-3">2013</a>
+            </li>
+            <li>
+              <a href="/" class="ml-3">2012</a>
+            </li>
+            <li>
+              <a href="/" class="ml-3">2011</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <app-heat-map [data]="data"
+              >
+              </app-heat-map> -->
+</div>

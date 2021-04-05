@@ -1,0 +1,54 @@
+.form-control::-webkit-input-placeholder {
+  color: #c8c9cb;
+}
+.form-control:-moz-placeholder {
+  color: #c8c9cb;
+}
+.form-control::-moz-placeholder {
+  color: #c8c9cb;
+}
+.form-control:-ms-input-placeholder {
+  color: #c8c9cb;
+}
+.form-control::-ms-input-placeholder {
+  color: #c8c9cb;
+}
+
+.search-input {
+  background-color: #24292e;
+  color: white;
+  color: white;
+  width: 300px;
+  height: 30px;
+  margin-top: 0.3rem;
+}
+.search-input-append{
+    background-color: #24292e;
+    color: white;
+    color: white;
+    height: 30px;
+    margin-top: 0.3rem;
+}
+
+.header-bg-primary{
+    background-color:#24292e;
+}
+.notification-badge{
+    position: relative;
+    margin-left: 60%;
+    margin-top: -60%;
+  }
+  .dropdown-header{
+    padding: 0rem 1.5rem !important;
+  }
+
+  .profile-avatar {
+    display: inline-block;
+    overflow: hidden;
+    line-height: 1;
+    vertical-align: middle;
+    background-color: #fff !important;
+    border-radius: 6px;
+    flex-shrink: 0;
+    box-shadow:  #fff !important;
+}

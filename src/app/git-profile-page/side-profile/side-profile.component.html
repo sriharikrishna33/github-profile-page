@@ -1,0 +1,82 @@
+<div class="row">
+    <div class="col-12 mt-2">
+        <img style="height:auto;border-radius: 50%!important;" alt="Avatar" width="260" height="260"
+            class="profile-avatar width-full border color-bg-primary"
+            [src]="userProfileDeatils.avatar_url">
+    </div>
+    <div class="col-12 mt-4">
+        <h3>{{userProfileDeatils.name}}</h3>
+    </div>
+    <div class="col-12">
+        <h5 class="text-muted">{{userProfileDeatils.login}}</h5>
+    </div>
+    <div class="col-12 mt-2">
+        <button type="button" class="btn btn-outline-secondary btn-sm mr-2">Follow</button>
+        <button type="button" class="btn btn-outline-secondary btn-sm mr-2"><i
+                class="far fa-heart text-danger"></i> Sponsor</button>
+        <button type="button" class="btn btn-outline-secondary btn-sm mr-2 w-25"><i
+                class="fas fa-ellipsis-h"></i>
+        </button>
+    </div>
+    <div class="col-10 mt-3">
+        <p>{{userProfileDeatils.bio}}</p>
+    </div>
+    <div class="col-2" style="display: none;"></div>
+    <div class="col-12">
+        <div class="row">
+            <div class="col">
+                <i class="fas fa-user-friends text-muted"></i>
+                <span class="text-bold"> {{userProfileDeatils.followers}} </span>
+                <span class="text-muted">followers . </span>
+                <span class="text-bold">{{userProfileDeatils.following}} </span>
+                <span class="text-muted">following . </span>
+                <i class="far fa-star text-muted"></i>
+                <span class="text-bold"> 561</span>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 mt-3 text-secondary">
+        <i class="far fa-building mr-2"></i>
+        {{userProfileDeatils.company?userProfileDeatils.company:'-'}}
+    </div>
+    <div class="col-12 text-secondary">
+        <i class="fas fa-map-marker-alt mr-2"></i>
+        {{userProfileDeatils.location?userProfileDeatils.location:'-'}}
+    </div>
+    <div class="col-12 text-secondary">
+        <i class="far fa-envelope mr-2"></i>
+        {{userProfileDeatils.email?userProfileDeatils.email:'-'}}
+    </div>
+    <div class="col-12 text-secondary">
+        <i class="fas fa-link mr-2"></i>
+        <a [href]="userProfileDeatils.blog?userProfileDeatils.blog:'/'" class="text-secondary">{{userProfileDeatils.blog?userProfileDeatils.blog:'-'}}</a>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-12 mt-2">
+        <h5>Highlights</h5>
+    </div>
+    <div class="col-12 text-secondary">
+        <i class="fas fa-asterisk mr-2"></i>
+        Arctic Code Vault Contributor
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-12 mt-2">
+        <h5>Organizations</h5>
+    </div>
+    <div class="col-12 mt-1">
+       <img src="https://avatars.githubusercontent.com/u/7457243?s=60&v=4"  class="profile-avatar" size="32" height="32" width="32" alt="no image">
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-12 mt-2">
+        <h5>Sponsors</h5>
+    </div>
+    <div class="col-12 mt-1">
+       <img src="https://avatars.githubusercontent.com/u/56362817?s=88&u=5e6b7dc41178691044b1bfa08e06441728e0b3c1&v=4" style="border-radius: 50%;"  class="profile-avatar" size="32" height="32" width="32" alt="no image">
+    </div>
+</div>
